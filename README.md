@@ -18,7 +18,7 @@ Since composer is the simplest and fastest way to install dependencies, the only
 
 	"require": {
     	...
-    	"spyrit/doctrine-datagrid-bundle": "dev-master"
+    	"tweak-it/doctrine-datagrid-bundle": "dev-master"
     	...
 	},
 

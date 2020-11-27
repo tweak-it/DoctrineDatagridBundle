@@ -1,34 +1,29 @@
 {
-    "name": "spyrit/doctrine-datagrid-bundle",
+    "name": "tweak-it/doctrine-datagrid-bundle",
     "description": "Symfony Datagrid Bundle for Doctrine.",
     "keywords": ["datagrid", "symfony", "doctrine"],
-    "homepage": "https://github.com/spyrit/DoctrineDatagridBundle.git",
+    "homepage": "https://github.com/tweak-it/DoctrineDatagridBundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "Maxime Corson",
-            "email": "maxime.corson@spyrit.net",
+            "name": "Stéphane OGET",
+            "email": "stephane.oget@tweak-it.fr",
             "role": "Developer"
-        },
-        {
-            "name": "Charles Henzel",
-            "email": "charles.henzel@spyrit.net",
-            "role": "Developer"
-        }
+        }      
     ],
     "support": {
-        "email": "support@spyrit.net"
+        "email": "support@tweak-it.fr"
     },
     "require": {
-        "php": ">=5.4",
-        "symfony/symfony": ">=2.3",
+        "php": ">= 7.2.5",
+        "symfony/symfony": ">=5.0",
         "csanquer/colibri-csv": "1.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.2.*"
     },
     "autoload": {
-	"psr-4": { "Spyrit\\Bundle\\DoctrineDatagridBundle\\": "" }
+		"psr-4": { "TweakIt\\Bundle\\DoctrineDatagridBundle\\": "" }
     }
 }
