@@ -20,5 +20,5 @@ Visit http://getcomposer.org/ for more information.
 ');
 }
 
-$loader->add('Spyrit\PropelDatagridBundle\Tests', __DIR__);
-$loader->add('Spyrit\TestBundle', __DIR__ . '/Fixtures/App/src');
+$loader->add('TweakIt\PropelDatagridBundle\Tests', __DIR__);
+$loader->add('TweakIt\TestBundle', __DIR__ . '/Fixtures/App/src');

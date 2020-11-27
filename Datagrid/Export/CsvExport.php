@@ -1,7 +1,7 @@
 <?php
-namespace Spyrit\Bundle\DoctrineDatagridBundle\Datagrid\Export;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid\Export;
 
-use Spyrit\Bundle\DoctrineDatagridBundle\Datagrid\Export\Export;
+use TweakIt\Bundle\DoctrineDatagridBundle\Datagrid\Export\Export;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use CSanquer\ColibriCsv\CsvWriter;

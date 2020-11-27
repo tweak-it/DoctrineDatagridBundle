@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle\DependencyInjection;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

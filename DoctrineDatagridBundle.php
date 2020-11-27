@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle;
+namespace TweakIt\Bundle\DoctrineDatagridBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

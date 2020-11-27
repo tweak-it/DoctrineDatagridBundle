@@ -17,7 +17,7 @@
     },
     "require": {
         "php": ">= 7.2.5",
-        "symfony/symfony": ">=5.0",
+        "symfony/framework-bundle": "5.1.*",
         "csanquer/colibri-csv": "1.2.*"
     },
     "require-dev": {

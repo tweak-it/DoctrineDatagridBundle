@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\PropelDatagridBundle\Tests\Controller;
+namespace TweakIt\PropelDatagridBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

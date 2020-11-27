@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle\Datagrid;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid;
 
 /**
  * Datagrid management class that support and handle pagination, sort, filter

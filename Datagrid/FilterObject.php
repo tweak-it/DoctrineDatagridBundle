@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle\Datagrid;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid;
 
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormFactory;

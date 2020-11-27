@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle\Datagrid\Export;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid\Export;
 
 /**
  * @author Maxime CORSON <maxime.corson@spyrit.net>

@@ -1,4 +1,4 @@
 services:
     doctrine.datagrid.factory:
-        class:     Spyrit\Bundle\DoctrineDatagridBundle\Datagrid\DoctrineDatagridFactory
+        class:     TweakIt\Bundle\DoctrineDatagridBundle\Datagrid\DoctrineDatagridFactory
         arguments: ["@service_container"]

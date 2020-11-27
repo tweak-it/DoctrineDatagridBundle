@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle\Datagrid;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid;
 use Symfony\Component\DependencyInjection\Container;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spyrit\Bundle\DoctrineDatagridBundle\Bridge\Doctrine\Helper;
+namespace TweakIt\Bundle\DoctrineDatagridBundle\Bridge\Doctrine\Helper;
 
 class QueryBuilderHelper
 {
