@@ -1,8 +1,8 @@
 <?php
 
 namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid;
-use Symfony\Component\DependencyInjection\Container;
-
+use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
 /**
  * @author Maxime CORSON <maxime.corson@spyrit.net>
  */
@@ -14,7 +14,7 @@ class DoctrineDatagridFactory
      * Just a simple constructor
      * @param Container $container
      */
-    public function __construct(Container $container)
+    public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
     }
