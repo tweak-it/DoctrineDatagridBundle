@@ -2,6 +2,12 @@
 
 namespace TweakIt\Bundle\DoctrineDatagridBundle\Datagrid;
 
+use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\Routing\RouterInterface;
+
 /**
  * Datagrid management class that support and handle pagination, sort, filter
  * and now, export actions.
