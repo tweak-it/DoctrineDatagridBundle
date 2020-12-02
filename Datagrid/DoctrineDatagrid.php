@@ -23,13 +23,6 @@ class DoctrineDatagrid
     const PARAM2 = 'param2';
     
     /**
-     * The container witch is usefull to get Request parameters and differents
-     * options and parameters.
-     * @var \Symfony\Component\DependencyInjection\Container
-     */
-    protected $container;
-    
-    /**
      * The query builder that filter the results
      * @var \Doctrine\ORM\QueryBuilder
      */
@@ -126,12 +119,16 @@ class DoctrineDatagrid
      */
     protected $managerName = null;
 
-    public function __construct($container, $name, $params = array())
+    public function __construct( $name, $params = array(), ManagerRegistry $doctrine,RequestStack $requestStack,SessionInterface $session,FormFactoryInterface $formFactory,RouterInterface $router)
     {
-        $this->container = $container;
         $this->name = $name;
         $this->params = $params;
-    }
+        $this->doctrine=$doctrine;
+        $this->requestStack=$requestStack;
+        $this->session=$session;
+        $this->formFactory= $formFactory;
+        $this->router=$router;
+}
     
     public function create($name, $params = array())
     {
@@ -189,7 +186,7 @@ class DoctrineDatagrid
     
     private function getManager()
     {
-        return $this->container->get('doctrine')->getManager($this->managerName);
+        return $this->doctrine->getManager($this->managerName);
     }
     
     private function isRequestedDatagrid()
@@ -764,7 +761,7 @@ class DoctrineDatagrid
      */
     protected function getRequest()
     {
-        return $this->container->get('request_stack')->getCurrentRequest();
+        return $this->requestStack->getCurrentRequest();
     }
     
     /**
@@ -773,7 +770,7 @@ class DoctrineDatagrid
      */
     protected function getSession()
     {
-        return $this->container->get('session');
+        return $this->session;
     }
     
     /**
@@ -782,7 +779,7 @@ class DoctrineDatagrid
      */
     protected function getFormFactory()
     {
-        return $this->container->get('form.factory');
+        return $this->formFactory;
     }
     
     public function getQueryBuilder()
@@ -819,7 +816,7 @@ class DoctrineDatagrid
             self::ACTION_DATAGRID => $this->name,
             self::PARAM1 => $page,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     
@@ -835,7 +832,7 @@ class DoctrineDatagrid
             self::ACTION => self::ACTION_RESET,
             self::ACTION_DATAGRID => $this->name,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     
@@ -856,7 +853,7 @@ class DoctrineDatagrid
             self::PARAM1 => $column,
             self::PARAM2 => $order,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     
@@ -874,7 +871,7 @@ class DoctrineDatagrid
             self::ACTION_DATAGRID => $this->name,
             self::PARAM1 => $column,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     
@@ -894,7 +891,7 @@ class DoctrineDatagrid
             self::PARAM1 => $newColumn,
             self::PARAM2 => $precedingColumn,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     
@@ -913,7 +910,7 @@ class DoctrineDatagrid
             self::ACTION_DATAGRID => $this->name,
             self::PARAM1 => $column,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     
@@ -932,7 +929,7 @@ class DoctrineDatagrid
             self::ACTION_DATAGRID => $this->name,
             self::PARAM1 => $limit,
         );
-        return $this->container->get('router')
+        return $this->router
             ->generate($route, array_merge($params, $extraParams));
     }
     

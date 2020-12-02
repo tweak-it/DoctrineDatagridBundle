@@ -1,4 +1,1 @@
 services:
-    doctrine.datagrid.factory:
-        class:     TweakIt\Bundle\DoctrineDatagridBundle\Datagrid\DoctrineDatagridFactory
-        arguments: ["@service_container"]
