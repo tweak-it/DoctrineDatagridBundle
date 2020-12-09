@@ -13,14 +13,14 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
  */
 class DoctrineDatagridFactory
 {
-    public function __construct(ManagerRegistry $doctrine,RequestStack $requestStack,SessionInterface $session,FormFactoryInterface $formFactory,RouterInterface $router,TokenStorageInterface $tokenstorage)
+    public function __construct(ManagerRegistry $doctrine,RequestStack $requestStack,SessionInterface $session,FormFactoryInterface $formFactory,RouterInterface $router,TokenStorageInterface $tokenStorage)
     {
         $this->doctrine=$doctrine;
         $this->requestStack=$requestStack;
         $this->session=$session;
         $this->formFactory= $formFactory;
         $this->router=$router;
-        $this->tokenstorage=$tokenstorage;
+        $this->tokenStorage=$tokenStorage;
     }
     
     /**
@@ -30,6 +30,6 @@ class DoctrineDatagridFactory
      */
     public function create($name, $params = array())
     {
-        return new DoctrineDatagrid($name, $params,$this->doctrine, $this->requestStack, $this->session, $this->formFactory, $this->router, $this->tokenstorage);
+        return new DoctrineDatagrid($name, $params,$this->doctrine, $this->requestStack, $this->session, $this->formFactory, $this->router, $this->tokenStorage);
     }
 }
