@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 /**
  * Datagrid management class that support and handle pagination, sort, filter
@@ -125,7 +126,7 @@ class DoctrineDatagrid
      */
     protected $managerName = null;
 
-    public function __construct( $name, $params = array(), ManagerRegistry $doctrine,RequestStack $requestStack,SessionInterface $session,FormFactoryInterface $formFactory,RouterInterface $router)
+    public function __construct( $name, $params = array(), ManagerRegistry $doctrine,RequestStack $requestStack,SessionInterface $session,FormFactoryInterface $formFactory,RouterInterface $router,TokenStorageInterface $tokenStorage)
     {
         $this->name = $name;
         $this->params = $params;
@@ -134,7 +135,8 @@ class DoctrineDatagrid
         $this->session=$session;
         $this->formFactory= $formFactory;
         $this->router=$router;
-}
+        $this->tokenStorage=$tokenStorage;
+    }
     
     public function create($name, $params = array())
     {
