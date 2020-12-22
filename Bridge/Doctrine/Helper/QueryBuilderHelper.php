@@ -23,25 +23,7 @@ class QueryBuilderHelper
                 }
             }
         }
-        
-        /**
-         * The following code is only available for Doctrine 2.5
-         */
-        /*$parts = $qb->getDQLPart('join');
-        $exists = false;
-
-        foreach ($parts as $joins)
-        {
-            foreach ($joins as $join)
-            {
-                if ($join->getAlias() === $alias)
-                {
-                    $exists = true;
-                    break 2;
-                }
-            }
-        }*/
-
+              
         if(!$exists)
         {
             $qb->leftJoin($field, $alias);
